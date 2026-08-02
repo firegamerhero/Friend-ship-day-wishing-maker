@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create a Friendship Day Page</title>
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <div class="editor-shell">
+    <aside class="editor-panel">
+      <h1>Make a Friendship Day page</h1>
+      <p class="sub">Fill this in, watch it update on the right, then generate a link to send.</p>
+
+      <label for="name">Their name</label>
+      <input type="text" id="name" maxlength="40" placeholder="e.g. Bhoomi">
+
+      <label for="from">Your name</label>
+      <input type="text" id="from" maxlength="40" placeholder="e.g. Pranjal">
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="8" maxlength="1200"></textarea>
+
+      <label for="quote">Friendship quote</label>
+      <textarea id="quote" rows="2" maxlength="240"></textarea>
+
+      <label class="checkbox-row">
+        <input type="checkbox" id="music" checked>
+        Play soft music when the surprise opens
+      </label>
+
+      <fieldset class="template-fieldset">
+        <legend>Template</legend>
+        <div class="template-grid" id="templateGrid"></div>
+      </fieldset>
+
+      <button type="button" id="generateBtn" class="generate-btn">Generate link</button>
+      <div class="link-output" id="linkOutput" hidden>
+        <input type="text" id="linkField" readonly>
+        <button type="button" id="copyBtn">Copy</button>
+      </div>
+      <p class="hint" id="linkHint" hidden>Anything typed above is packed into this link itself — nothing is stored on a server, so the link only works if you share it directly.</p>
+    </aside>
+
+    <section class="preview-panel">
+      <div class="preview-label">Live preview</div>
+      <div class="preview-frame-wrap">
+        <iframe id="previewFrame" title="Live preview"></iframe>
+      </div>
+    </section>
+  </div>
+
+  <script src="render.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
